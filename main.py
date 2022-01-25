@@ -7,7 +7,7 @@ import pandas as pd
 # Labels in our dataset.
 labels = ["contradiction", "entailment", "neutral"]
 
-model=load_model('./models/testmodel1.h5')
+model=load_model('./models/testmodels/testmodel1.h5')
 
 '''
 op = 1

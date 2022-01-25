@@ -3,7 +3,7 @@ import numpy as np
 import transformers
 from keras.models import load_model
 
-bert_model = transformers.TFBertModel.from_pretrained("./bert-base-uncased/") 
+bert_model = transformers.TFBertModel.from_pretrained("./models/bert-base-uncased/") 
 max_length = 128  # Maximum length of input sentence to the model.
 batch_size = 32
 
@@ -26,7 +26,7 @@ class BertSemanticDataGenerator(tf.keras.utils.Sequence):
         # We will use base-base-uncased pretrained model.
         
         self.tokenizer = transformers.BertTokenizer.from_pretrained(
-            "./bert-base-uncased/", do_lower_case=True
+            "./models/bert-base-uncased/", do_lower_case=True
         )
         self.indexes = np.arange(len(self.sentence_pairs))
         self.on_epoch_end()
