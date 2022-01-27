@@ -1,0 +1,7 @@
+services:
+  smartassessment:
+    public: true
+    image: kederdoc123/smartassessment-crud:latest
+    build:  .
+    ports:
+      - "8080:8080" 
